@@ -1,0 +1,160 @@
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('carbon-fiber-texture.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-line {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px 0;
+    background-color: #fff;
+}
+
+/* Menu Styles */
+.menu {
+    position: absolute;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.3s ease;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Client Details Form */
+.client-details {
+    width: 80%;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Notification Bell */
+.notification-bell {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.notification-dot {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Notifications Modal */
+.notifications-modal {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.notifications-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notifications-list li {
+    margin: 10px 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .client-details {
+        width: 100%;
+        margin: 20px;
+    }
+
+    .hamburger {
+        padding: 15px;
+    }
+
+    .menu {
+        left: 0;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+        width: 100%;
+    }
+}

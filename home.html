@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - Client Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hamburger Icon for Menu -->
+    <div class="hamburger" id="hamburger-icon">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </div>
+
+    <!-- Hidden Menu -->
+    <div id="menu" class="menu">
+        <ul>
+            <li><a href="#" id="homeLink">Home</a></li>
+            <li><a href="my-leads.html">My Leads</a></li>
+            <li><a href="#" id="logoutLink">Log Out</a></li>
+        </ul>
+    </div>
+
+    <!-- Client Details Section -->
+    <div class="client-details">
+        <h2>Client Details</h2>
+        <form id="clientForm">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter Name" required />
+            </div>
+            <div class="input-group">
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" placeholder="Enter Surname" required />
+            </div>
+            <div class="input-group">
+                <label for="idNumber">ID Number:</label>
+                <input type="text" id="idNumber" placeholder="Enter ID Number" required />
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter Email" required />
+            </div>
+            <div class="input-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="text" id="contactNumber" placeholder="Enter Contact Number" required />
+            </div>
+            
+            <!-- Sale Details Section -->
+            <div class="sale-details">
+                <h3>Sale Details</h3>
+                <div class="input-group">
+                    <label for="medicalAidSold">Was Medical Aid Sold?</label>
+                    <select id="medicalAidSold">
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+                </div>
+                
+                <!-- Medical Aid Details -->
+                <div id="medicalAidDetails" style="display:none;">
+                    <div class="input-group">
+                        <label for="medicalAidProvider">Medical Aid Provider:</label>
+                        <select id="medicalAidProvider">
+                            <option value="Bonitas">Bonitas</option>
+                            <option value="Keyhealth">Keyhealth</option>
+                            <option value="Discovery">Discovery</option>
+                            <option value="Medshield">Medshield</option>
+                            <option value="Fedhealth">Fedhealth</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div id="otherMedicalAid" style="display:none;">
+                        <label for="otherMedicalAidName">Please specify:</label>
+                        <input type="text" id="otherMedicalAidName" placeholder="Other Medical Aid" />
+                    </div>
+                    <div class="input-group">
+                        <label for="medicalAidNumber">Medical Aid Number:</label>
+                        <input type="text" id="medicalAidNumber" placeholder="Optional" />
+                    </div>
+                </div>
+
+                <!-- Gap Cover Details -->
+                <div class="input-group">
+                    <label for="gapCoverSold">Was Gap Cover Sold?</label>
+                    <select id="gapCoverSold">
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+                </div>
+                <div id="gapCoverDetails" style="display:none;">
+                    <div class="input-group">
+                        <label for="gapCoverProvider">Gap Cover Provider:</label>
+                        <select id="gapCoverProvider">
+                            <option value="Sanlam Gap">Sanlam Gap</option>
+                            <option value="Medgap">Medgap</option>
+                            <option value="Stratum">Stratum</option>
+                            <option value="Turnberry">Turnberry</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div id="otherGapCover" style="display:none;">
+                        <label for="otherGapCoverName">Please specify:</label>
+                        <input type="text" id="otherGapCoverName" placeholder="Other Gap Cover" />
+                    </div>
+                    <div class="input-group">
+                        <label for="gapCoverPolicyNumber">Policy Number:</label>
+                        <input type="text" id="gapCoverPolicyNumber" placeholder="Optional" />
+                    </div>
+                </div>
+
+                <!-- Other Products Sold -->
+                <div class="input-group">
+                    <label for="otherProductsSold">Any Other Products Sold?</label>
+                    <select id="otherProductsSold">
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+                </div>
+                <div id="otherProductsDetails" style="display:none;">
+                    <label for="otherProducts">Please specify:</label>
+                    <input type="text" id="otherProducts" placeholder="Other Products Sold" />
+                </div>
+
+                <!-- Comments Section -->
+                <div class="input-group">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" placeholder="Enter Comments"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="reminderSwitch">Remind Me:</label>
+                    <input type="checkbox" id="reminderSwitch" />
+                    <input type="date" id="reminderDate" style="display:none;" />
+                    <input type="time" id="reminderTime" style="display:none;" />
+                </div>
+            </div>
+            
+            <!-- Save Client Button -->
+            <button type="submit" id="saveClientBtn">Save Client</button>
+        </form>
+    </div>
+
+    <!-- Notification Bell Icon -->
+    <div id="notificationBell" class="notification-bell">
+        <span class="bell-icon">🔔</span>
+        <span id="notificationDot" class="notification-dot"></span>
+    </div>
+
+    <!-- Notifications Modal -->
+    <div id="notificationsModal" class="notifications-modal">
+        <div id="notificationsList" class="notifications-list"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
